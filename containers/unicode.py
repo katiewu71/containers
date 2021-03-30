@@ -28,7 +28,7 @@ class NormalizedStr:
         The string returned by the __repr__ function should be valid python code
         that can be substituted directly into the python interpreter to reproduce an equivalent object.
         '''
-        return 'NormalizedStr(\''+self._text+'\', \''+self._normal_form+'\')'
+        return 'NormalizedStr(\'' + self._text + '\', \'' + self._normal_form + '\')'
 
     def __str__(self):
         '''
