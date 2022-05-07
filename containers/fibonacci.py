@@ -1,4 +1,3 @@
-
 ################################################################################
 # example fibonacci number code;
 # you do not have to modify this code in any way
@@ -61,7 +60,7 @@ class Fib:
     [1, 1, 2, 3, 5]
     '''
     def __init__(self, n):
-        self.n = n 
+        self.n = n
 
     def __iter__(self):
         return FibIter(self.n)
@@ -71,7 +70,7 @@ class FibIter:
     '''
     This is the iterator helper class for the Fib class.
     '''
-    def __init__(self, n): 
+    def __init__(self, n):
         self.n = n
         self.x = 0
         self.y = 1
@@ -80,7 +79,7 @@ class FibIter:
     def __next__(self):
         if self.n <= self.i:
             raise StopIteration
-        else: 
+        else:
             self.i += 1
             self.x, self.y = self.y, (self.x + self.y)
             return self.x
@@ -93,6 +92,11 @@ def fib_yield(n=None):
     '''
     x = 0
     y = 1
-    for i in range(n):
-        x, y = y, x + y
-        yield x
+    if n is None:
+        while True:
+            x, y = y, x + y
+            yield x
+    else:
+        for i in range(n):
+            x, y = y, x + y
+            yield x
