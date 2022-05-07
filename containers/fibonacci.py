@@ -70,6 +70,7 @@ class Fib:
             return "Fib()"
         return f"Fib({self.n})"
 
+
 class FibIter:
     '''
     This is the iterator helper class for the Fib class.
