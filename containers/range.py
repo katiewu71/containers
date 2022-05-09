@@ -33,7 +33,7 @@ def range(a, b=None, c=None):
         c = 1
     elif c is None:
         c = 1
-    i = a
-    while i < b:
-        yield i
-        i += c
+    # i = a
+    while a < b:
+        yield a
+        a += c
