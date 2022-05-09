@@ -32,7 +32,11 @@ def range(a, b=None, c=None):
         a = 0
     if c is None:
         c = 1
-    if ((a < b) and c > 0) or ((a > b) and c < 0):
+    if ((a < b) and c > 0):
         while a < b:
+            yield a
+            a += c
+    if ((a > b) and c < 0):
+        while a > b:
             yield a
             a += c
